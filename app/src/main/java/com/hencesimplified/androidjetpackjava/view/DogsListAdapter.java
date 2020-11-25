@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.hencesimplified.androidjetpackjava.R;
 import com.hencesimplified.androidjetpackjava.model.DogBreed;
+import com.hencesimplified.androidjetpackjava.util.Util;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,6 +45,7 @@ public class DogsListAdapter extends RecyclerView.Adapter<DogsListAdapter.DogVie
 
         name.setText(dogsList.get(position).dogBreed);
         lifespan.setText(dogsList.get(position).lifeSpan);
+        Util.loadImage(image, dogsList.get(position).imageUrl, Util.setProgressDrawable(image.getContext()));
 
     }
 
