@@ -1,14 +1,18 @@
 package com.hencesimplified.androidjetpackjava.viewmodel;
 
 import android.app.Application;
+import android.os.AsyncTask;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.MutableLiveData;
 
 import com.hencesimplified.androidjetpackjava.model.DogBreed;
+import com.hencesimplified.androidjetpackjava.model.DogDao;
+import com.hencesimplified.androidjetpackjava.model.DogDatabase;
 import com.hencesimplified.androidjetpackjava.model.DogsApiService;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import io.reactivex.android.schedulers.AndroidSchedulers;
@@ -21,6 +25,8 @@ public class ListViewModel extends AndroidViewModel {
     public MutableLiveData<List<DogBreed>> dogs = new MutableLiveData<>();
     public MutableLiveData<Boolean> dogLoadError = new MutableLiveData<>();
     public MutableLiveData<Boolean> loading = new MutableLiveData<>();
+
+    private AsyncTask<List<DogBreed>, Void, List<DogBreed>> insertTask;
 
     private DogsApiService dogsApiService = new DogsApiService();
     private CompositeDisposable disposable = new CompositeDisposable();
@@ -59,9 +65,8 @@ public class ListViewModel extends AndroidViewModel {
                         .subscribeWith(new DisposableSingleObserver<List<DogBreed>>() {
                             @Override
                             public void onSuccess(@io.reactivex.annotations.NonNull List<DogBreed> dogBreeds) {
-                                dogs.setValue(dogBreeds);
-                                dogLoadError.setValue(false);
-                                loading.setValue(false);
+                                insertTask = new InsertDogsTask();
+                                insertTask.execute(dogBreeds);
                             }
 
                             @Override
@@ -74,9 +79,45 @@ public class ListViewModel extends AndroidViewModel {
         );
     }
 
+    private void dogsRetrieved(List<DogBreed> dogList) {
+        dogs.setValue(dogList);
+        dogLoadError.setValue(false);
+        loading.setValue(false);
+    }
+
     @Override
     protected void onCleared() {
         super.onCleared();
         disposable.clear();
+
+        if(insertTask!=null){
+            insertTask.cancel(true);
+            insertTask = null;
+        }
+    }
+
+    private class InsertDogsTask extends AsyncTask<List<DogBreed>, Void, List<DogBreed>> {
+
+        @Override
+        protected List<DogBreed> doInBackground(List<DogBreed>... lists) {
+            List<DogBreed> list = lists[0];
+            DogDao dao = DogDatabase.getInstance(getApplication()).dogDao();
+            dao.deleteAllDogs();
+
+            ArrayList<DogBreed> newList = new ArrayList<>(list);
+            List<Long> result = dao.insertAll(newList.toArray(new DogBreed[0]));
+
+            int i = 0;
+            while (i < list.size()) {
+                list.get(i).uuid = result.get(i).intValue();
+                ++i;
+            }
+            return list;
+        }
+
+        @Override
+        protected void onPostExecute(List<DogBreed> dogBreeds) {
+            dogsRetrieved(dogBreeds);
+        }
     }
 }
