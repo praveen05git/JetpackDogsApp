@@ -2,6 +2,7 @@ package com.hencesimplified.androidjetpackjava.viewmodel;
 
 import android.app.Application;
 import android.os.AsyncTask;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
@@ -67,6 +68,7 @@ public class ListViewModel extends AndroidViewModel {
                             public void onSuccess(@io.reactivex.annotations.NonNull List<DogBreed> dogBreeds) {
                                 insertTask = new InsertDogsTask();
                                 insertTask.execute(dogBreeds);
+                                Toast.makeText(getApplication(),"Retrieved from endpoint", Toast.LENGTH_LONG).show();
                             }
 
                             @Override
@@ -105,7 +107,7 @@ public class ListViewModel extends AndroidViewModel {
             dao.deleteAllDogs();
 
             ArrayList<DogBreed> newList = new ArrayList<>(list);
-            List<Long> result = dao.insertAll(newList.toArray(new DogBreed[0]));
+            List<Long> result = dao.insertAll(list.toArray(new DogBreed[0]));
 
             int i = 0;
             while (i < list.size()) {
