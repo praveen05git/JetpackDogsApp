@@ -12,6 +12,7 @@ import com.hencesimplified.androidjetpackjava.model.DogBreed;
 import com.hencesimplified.androidjetpackjava.model.DogDao;
 import com.hencesimplified.androidjetpackjava.model.DogDatabase;
 import com.hencesimplified.androidjetpackjava.model.DogsApiService;
+import com.hencesimplified.androidjetpackjava.util.SharedPreferencesHelper;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,6 +30,9 @@ public class ListViewModel extends AndroidViewModel {
 
     private AsyncTask<List<DogBreed>, Void, List<DogBreed>> insertTask;
     private AsyncTask<Void, Void, List<DogBreed>> retrieveTask;
+
+    private SharedPreferencesHelper preferencesHelper = SharedPreferencesHelper.getInstance(getApplication());
+    private long refreshTime = 5 * 60 * 1000 * 1000 * 1000L;
 
     private DogsApiService dogsApiService = new DogsApiService();
     private CompositeDisposable disposable = new CompositeDisposable();
@@ -55,8 +59,16 @@ public class ListViewModel extends AndroidViewModel {
      */
 
     public void refresh() {
+
+        long updateTime = preferencesHelper.getUpdateTime();
+        long currentTime = System.nanoTime();
+        if (updateTime != 0 && currentTime - updateTime < refreshTime) {
+            fetchFromDatabase();
+        } else {
+            fetchFromRemote();
+        }
         //fetchFromRemote();
-        fetchFromDatabase();
+        //fetchFromDatabase();
     }
 
     private void fetchFromDatabase() {
@@ -133,6 +145,7 @@ public class ListViewModel extends AndroidViewModel {
         @Override
         protected void onPostExecute(List<DogBreed> dogBreeds) {
             dogsRetrieved(dogBreeds);
+            preferencesHelper.saveUpdateTime(System.nanoTime());
         }
     }
 
