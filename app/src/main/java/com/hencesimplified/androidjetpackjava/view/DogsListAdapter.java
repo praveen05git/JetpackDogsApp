@@ -3,17 +3,14 @@ package com.hencesimplified.androidjetpackjava.view;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.navigation.Navigation;
+import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.hencesimplified.androidjetpackjava.R;
+import com.hencesimplified.androidjetpackjava.databinding.ItemDogBinding;
 import com.hencesimplified.androidjetpackjava.model.DogBreed;
-import com.hencesimplified.androidjetpackjava.util.Util;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,12 +32,16 @@ public class DogsListAdapter extends RecyclerView.Adapter<DogsListAdapter.DogVie
     @NonNull
     @Override
     public DogViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_dog, parent, false);
+        LayoutInflater inflater = LayoutInflater.from(parent.getContext());
+        ItemDogBinding view = DataBindingUtil.inflate(inflater, R.layout.item_dog, parent, false);
+        //View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_dog, parent, false);
         return new DogViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull DogViewHolder holder, int position) {
+        holder.itemView.setDog(dogsList.get(position));
+        /*
         ImageView image = holder.itemView.findViewById(R.id.imageView);
         TextView name = holder.itemView.findViewById(R.id.name);
         TextView lifespan = holder.itemView.findViewById(R.id.lifespan);
@@ -54,6 +55,8 @@ public class DogsListAdapter extends RecyclerView.Adapter<DogsListAdapter.DogVie
             action.setDogUuid(dogsList.get(position).uuid);
             Navigation.findNavController(layout).navigate(action);
         });
+         */
+
     }
 
     @Override
@@ -63,10 +66,11 @@ public class DogsListAdapter extends RecyclerView.Adapter<DogsListAdapter.DogVie
 
     class DogViewHolder extends RecyclerView.ViewHolder {
 
-        public View itemView;
+        //public View itemView;
+        public ItemDogBinding itemView;
 
-        public DogViewHolder(@NonNull View itemView) {
-            super(itemView);
+        public DogViewHolder(@NonNull ItemDogBinding itemView) {
+            super(itemView.getRoot());
             this.itemView = itemView;
         }
     }
