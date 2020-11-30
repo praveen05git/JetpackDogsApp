@@ -64,6 +64,14 @@ public class ListFragment extends Fragment {
         dogsList.setLayoutManager(new LinearLayoutManager(getContext()));
         dogsList.setAdapter(dogsListAdapter);
 
+        refreshLayout.setOnRefreshListener(() -> {
+            dogsList.setVisibility(View.VISIBLE);
+            listError.setVisibility(View.GONE);
+            loadingView.setVisibility(View.VISIBLE);
+            viewModel.refreshBypassCache();
+            refreshLayout.setRefreshing(false);
+        });
+
         observeViewModel();
     }
 
