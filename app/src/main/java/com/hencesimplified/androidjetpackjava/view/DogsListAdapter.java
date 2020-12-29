@@ -1,10 +1,13 @@
 package com.hencesimplified.androidjetpackjava.view;
 
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.databinding.DataBindingUtil;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.hencesimplified.androidjetpackjava.R;
@@ -14,7 +17,7 @@ import com.hencesimplified.androidjetpackjava.model.DogBreed;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DogsListAdapter extends RecyclerView.Adapter<DogsListAdapter.DogViewHolder> {
+public class DogsListAdapter extends RecyclerView.Adapter<DogsListAdapter.DogViewHolder> implements DogClickListener {
 
     private ArrayList<DogBreed> dogsList;
 
@@ -40,6 +43,7 @@ public class DogsListAdapter extends RecyclerView.Adapter<DogsListAdapter.DogVie
     @Override
     public void onBindViewHolder(@NonNull DogViewHolder holder, int position) {
         holder.itemView.setDog(dogsList.get(position));
+        holder.itemView.setListener(this);
         /*
         ImageView image = holder.itemView.findViewById(R.id.imageView);
         TextView name = holder.itemView.findViewById(R.id.name);
@@ -55,7 +59,15 @@ public class DogsListAdapter extends RecyclerView.Adapter<DogsListAdapter.DogVie
             Navigation.findNavController(layout).navigate(action);
         });
          */
+    }
 
+    @Override
+    public void onDogClicked(View view) {
+        String uuidString = ((TextView) view.findViewById(R.id.dogId)).getText().toString();
+        int uuid = Integer.valueOf(uuidString);
+        ListFragmentDirections.ActionDetail action = ListFragmentDirections.actionDetail();
+        action.setDogUuid(uuid);
+        Navigation.findNavController(view).navigate(action);
     }
 
     @Override

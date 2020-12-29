@@ -24,9 +24,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="70006971-6728-473b-b438-ece04f1d873a" name="Default Changelist" comment="">
+    <list default="true" id="70006971-6728-473b-b438-ece04f1d873a" name="Default Changelist" comment="ImageView Binding">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/hencesimplified/androidjetpackjava/view/DogClickListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/hencesimplified/androidjetpackjava/util/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/hencesimplified/androidjetpackjava/util/Util.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/hencesimplified/androidjetpackjava/view/DogsListAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/hencesimplified/androidjetpackjava/view/DogsListAdapter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_dog.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_dog.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,6 +40,13 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -134,6 +142,14 @@
       <option name="presentableId" value="Default" />
       <updated>1608308370236</updated>
     </task>
+    <task id="LOCAL-00001" summary="ImageView Binding">
+      <created>1609238992856</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1609238992856</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -148,11 +164,19 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="ImageView Binding" />
+    <option name="LAST_COMMIT_MESSAGE" value="ImageView Binding" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="158" y="86" key="#PSD" timestamp="1609135056097">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="158" y="86" key="#PSD/0.0.1280.680@0.0.1280.680" timestamp="1609135056097" />
+    <state x="446" y="47" key="#com.intellij.ide.util.MemberChooser" timestamp="1609240138921">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="446" y="47" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1609240138921" />
     <state x="93" y="93" width="1095" height="495" key="AVDManager" timestamp="1609238625284">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -165,6 +189,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1609237857359" />
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1609239003971">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1609239003971" />
     <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1609238022967">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
