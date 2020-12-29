@@ -1,8 +1,10 @@
 package com.hencesimplified.androidjetpackjava.util;
 
 import android.content.Context;
+import android.view.View;
 import android.widget.ImageView;
 
+import androidx.databinding.BindingAdapter;
 import androidx.swiperefreshlayout.widget.CircularProgressDrawable;
 
 import com.bumptech.glide.Glide;
@@ -21,11 +23,16 @@ public class Util {
                 .into(imageView);
     }
 
-    public static CircularProgressDrawable setProgressDrawable(Context context) {
+    public static CircularProgressDrawable getProgressDrawable(Context context) {
         CircularProgressDrawable cpd = new CircularProgressDrawable(context);
         cpd.setStrokeWidth(10f);
         cpd.setCenterRadius(50f);
         cpd.start();
         return cpd;
+    }
+
+    @BindingAdapter("android:imageUrl")
+    public static void loadImage(ImageView view, String url) {
+        loadImage(view, url, getProgressDrawable(view.getContext()));
     }
 }
