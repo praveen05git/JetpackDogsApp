@@ -12,6 +12,7 @@ import com.hencesimplified.androidjetpackjava.model.DogBreed;
 import com.hencesimplified.androidjetpackjava.model.DogDao;
 import com.hencesimplified.androidjetpackjava.model.DogDatabase;
 import com.hencesimplified.androidjetpackjava.model.DogsApiService;
+import com.hencesimplified.androidjetpackjava.util.NotificationHelper;
 import com.hencesimplified.androidjetpackjava.util.SharedPreferencesHelper;
 
 import java.util.ArrayList;
@@ -93,6 +94,7 @@ public class ListViewModel extends AndroidViewModel {
                                 insertTask = new InsertDogsTask();
                                 insertTask.execute(dogBreeds);
                                 Toast.makeText(getApplication(), "Retrieved from endpoint", Toast.LENGTH_LONG).show();
+                                NotificationHelper.getInstance(getApplication()).createNotification();
                             }
 
                             @Override
