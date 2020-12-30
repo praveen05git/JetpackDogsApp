@@ -24,7 +24,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="70006971-6728-473b-b438-ece04f1d873a" name="Default Changelist" comment="Done ListView Data Binding">
+    <list default="true" id="70006971-6728-473b-b438-ece04f1d873a" name="Default Changelist" comment="Done Data Binding for DetailFragment">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/hencesimplified/androidjetpackjava/model/DogPalette.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/hencesimplified/androidjetpackjava/view/DetailFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/hencesimplified/androidjetpackjava/view/DetailFragment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_detail.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_detail.xml" afterDir="false" />
@@ -34,7 +35,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[Pixel_3a_API_30_x86]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -44,6 +45,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -155,7 +157,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609240541131</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Done Data Binding for DetailFragment">
+      <created>1609305493805</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1609305493805</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -173,17 +182,18 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="ImageView Binding" />
     <MESSAGE value="Done ListView Data Binding" />
-    <option name="LAST_COMMIT_MESSAGE" value="Done ListView Data Binding" />
+    <MESSAGE value="Done Data Binding for DetailFragment" />
+    <option name="LAST_COMMIT_MESSAGE" value="Done Data Binding for DetailFragment" />
   </component>
   <component name="WindowStateProjectService">
     <state x="158" y="86" key="#PSD" timestamp="1609135056097">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="158" y="86" key="#PSD/0.0.1280.680@0.0.1280.680" timestamp="1609135056097" />
-    <state x="446" y="47" key="#com.intellij.ide.util.MemberChooser" timestamp="1609240138921">
+    <state x="446" y="47" key="#com.intellij.ide.util.MemberChooser" timestamp="1609306701349">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="446" y="47" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1609240138921" />
+    <state x="446" y="47" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1609306701349" />
     <state x="93" y="93" width="1095" height="495" key="AVDManager" timestamp="1609305339134">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -196,10 +206,14 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1609240617413" />
-    <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1609240561031">
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1609305500428">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1609240561031" />
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1609305500428" />
+    <state x="298" y="151" key="run.anything.popup" timestamp="1609306843258">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="298" y="151" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1609306843258" />
     <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1609304761110">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

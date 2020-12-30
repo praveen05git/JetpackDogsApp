@@ -1,5 +1,7 @@
 package com.hencesimplified.androidjetpackjava.view;
 
+import android.graphics.Bitmap;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,11 +14,16 @@ import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProviders;
+import androidx.palette.graphics.Palette;
 import androidx.swiperefreshlayout.widget.CircularProgressDrawable;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.target.CustomTarget;
+import com.bumptech.glide.request.transition.Transition;
 import com.hencesimplified.androidjetpackjava.R;
 import com.hencesimplified.androidjetpackjava.databinding.FragmentDetailBinding;
 import com.hencesimplified.androidjetpackjava.model.DogBreed;
+import com.hencesimplified.androidjetpackjava.model.DogPalette;
 import com.hencesimplified.androidjetpackjava.util.Util;
 import com.hencesimplified.androidjetpackjava.viewmodel.DetailViewModel;
 
@@ -96,7 +103,32 @@ public class DetailFragment extends Fragment {
                  */
 
                 binding.setDog(dogBreed);
+                if (dogBreed.imageUrl != null) {
+                    setupBackgroundColor(dogBreed.imageUrl);
+                }
             }
         });
+    }
+
+    private void setupBackgroundColor(String url) {
+        Glide.with(this)
+                .asBitmap()
+                .load(url)
+                .into(new CustomTarget<Bitmap>() {
+                    @Override
+                    public void onResourceReady(@NonNull Bitmap resource, @Nullable Transition<? super Bitmap> transition) {
+                        Palette.from(resource)
+                                .generate(palette -> {
+                                    int intColor = palette.getLightMutedSwatch().getRgb();
+                                    DogPalette myPalette = new DogPalette(intColor);
+                                    binding.setPalette(myPalette);
+                                });
+                    }
+
+                    @Override
+                    public void onLoadCleared(@Nullable Drawable placeholder) {
+
+                    }
+                });
     }
 }
