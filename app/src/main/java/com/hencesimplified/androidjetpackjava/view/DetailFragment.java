@@ -9,11 +9,13 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.swiperefreshlayout.widget.CircularProgressDrawable;
 
 import com.hencesimplified.androidjetpackjava.R;
+import com.hencesimplified.androidjetpackjava.databinding.FragmentDetailBinding;
 import com.hencesimplified.androidjetpackjava.model.DogBreed;
 import com.hencesimplified.androidjetpackjava.util.Util;
 import com.hencesimplified.androidjetpackjava.viewmodel.DetailViewModel;
@@ -25,7 +27,9 @@ public class DetailFragment extends Fragment {
 
     private int dogUuid;
     private DetailViewModel viewModel;
+    private FragmentDetailBinding binding;
 
+    /*
     @BindView(R.id.dogImage)
     ImageView dogImage;
 
@@ -40,6 +44,7 @@ public class DetailFragment extends Fragment {
 
     @BindView(R.id.dogLifespan)
     TextView dogLifespan;
+     */
 
     public DetailFragment() {
         // Required empty public constructor
@@ -49,9 +54,16 @@ public class DetailFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_detail, container, false);
-        ButterKnife.bind(this, view);
-        return view;
+        //View view = inflater.inflate(R.layout.fragment_detail, container, false);
+
+        //ButterKnife.bind(this, view);
+        //return view;
+
+        FragmentDetailBinding binding = DataBindingUtil.inflate(inflater, R.layout.fragment_detail, container, false);
+        this.binding = binding;
+        ///binding.dogName.setText("Some text"); Can directly set data using binding
+        return binding.getRoot();
+
     }
 
     @Override
@@ -70,7 +82,9 @@ public class DetailFragment extends Fragment {
 
     private void observeViewModel() {
         viewModel.dogLiveData.observe(this, dogBreed -> {
+
             if (dogBreed != null && dogBreed instanceof DogBreed && getContext() != null) {
+                /*
                 dogName.setText(dogBreed.dogBreed);
                 dogPurpose.setText(dogBreed.bredFor);
                 temperament.setText(dogBreed.temperament);
@@ -79,6 +93,9 @@ public class DetailFragment extends Fragment {
                 if (dogBreed.imageUrl != null) {
                     Util.loadImage(dogImage, dogBreed.imageUrl, new CircularProgressDrawable(getContext()));
                 }
+                 */
+
+                binding.setDog(dogBreed);
             }
         });
     }
