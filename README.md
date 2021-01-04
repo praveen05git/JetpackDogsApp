@@ -1,4 +1,4 @@
-<h1 align="center">Dogs App</h1>
+<h1 align="center">Dogs App (⚠ Work in Progress! ⚠)</h1>
 
 <p align="center">  
  App to demonstrate MVVM, Retrofit and RxJava</br>
