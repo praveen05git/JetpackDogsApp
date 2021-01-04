@@ -4,6 +4,9 @@ import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -35,6 +38,7 @@ public class DetailFragment extends Fragment {
     private int dogUuid;
     private DetailViewModel viewModel;
     private FragmentDetailBinding binding;
+    private Boolean sendSmsStarted = false;
 
     /*
     @BindView(R.id.dogImage)
@@ -68,6 +72,7 @@ public class DetailFragment extends Fragment {
 
         FragmentDetailBinding binding = DataBindingUtil.inflate(inflater, R.layout.fragment_detail, container, false);
         this.binding = binding;
+        setHasOptionsMenu(true);
         ///binding.dogName.setText("Some text"); Can directly set data using binding
         return binding.getRoot();
 
@@ -130,5 +135,31 @@ public class DetailFragment extends Fragment {
 
                     }
                 });
+    }
+
+    @Override
+    public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
+        super.onCreateOptionsMenu(menu, inflater);
+        inflater.inflate(R.menu.detail_menu, menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_send_sms:
+                if (!sendSmsStarted) {
+                    sendSmsStarted = true;
+                    ((MainActivity) getActivity()).checkSmsPermission();
+                }
+                break;
+            case R.id.action_share:
+                break;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    public void onPermissionResult(Boolean permissionGranted) {
+
     }
 }
