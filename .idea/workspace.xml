@@ -24,14 +24,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="70006971-6728-473b-b438-ece04f1d873a" name="Default Changelist" comment="Working on Settings">
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_send.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_share.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/menu/detail_menu.xml" afterDir="false" />
+    <list default="true" id="70006971-6728-473b-b438-ece04f1d873a" name="Default Changelist" comment="Working on Share and SMS feature">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/hencesimplified/androidjetpackjava/model/SmsInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/send_sms_dialog.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/hencesimplified/androidjetpackjava/view/DetailFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/hencesimplified/androidjetpackjava/view/DetailFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/hencesimplified/androidjetpackjava/view/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/hencesimplified/androidjetpackjava/view/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/hencesimplified/androidjetpackjava/viewmodel/ListViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/hencesimplified/androidjetpackjava/viewmodel/ListViewModel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,8 +46,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="resourceFile" />
+        <option value="layoutResourceFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -200,7 +199,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609402110214</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Working on Share and SMS feature">
+      <created>1609747791815</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1609747791815</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -223,25 +229,26 @@
     <MESSAGE value="Implemented Color Palette" />
     <MESSAGE value="Implemented Notification" />
     <MESSAGE value="Working on Settings" />
-    <option name="LAST_COMMIT_MESSAGE" value="Working on Settings" />
+    <MESSAGE value="Working on Share and SMS feature" />
+    <option name="LAST_COMMIT_MESSAGE" value="Working on Share and SMS feature" />
   </component>
   <component name="WindowStateProjectService">
     <state x="158" y="86" key="#PSD" timestamp="1609135056097">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="158" y="86" key="#PSD/0.0.1280.680@0.0.1280.680" timestamp="1609135056097" />
-    <state x="446" y="47" key="#com.intellij.ide.util.MemberChooser" timestamp="1609744249767">
+    <state x="446" y="47" key="#com.intellij.ide.util.MemberChooser" timestamp="1609756970546">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="446" y="47" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1609744249767" />
-    <state x="93" y="93" width="1095" height="495" key="AVDManager" timestamp="1609747760446">
+    <state x="446" y="47" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1609756970546" />
+    <state x="93" y="93" width="1095" height="495" key="AVDManager" timestamp="1609747828062">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="93" y="93" width="1095" height="495" key="AVDManager/0.0.1280.680@0.0.1280.680" timestamp="1609747760446" />
-    <state x="221" y="95" key="AndroidCreateResourceFileDialog" timestamp="1609743971023">
+    <state x="93" y="93" width="1095" height="495" key="AVDManager/0.0.1280.680@0.0.1280.680" timestamp="1609747828062" />
+    <state x="221" y="95" key="AndroidCreateResourceFileDialog" timestamp="1609756739009">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="221" y="95" key="AndroidCreateResourceFileDialog/0.0.1280.680@0.0.1280.680" timestamp="1609743971023" />
+    <state x="221" y="95" key="AndroidCreateResourceFileDialog/0.0.1280.680@0.0.1280.680" timestamp="1609756739009" />
     <state x="421" y="95" key="FileChooserDialogImpl" timestamp="1609498247823">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -250,25 +257,25 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1609747270833" />
-    <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1609402118929">
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1609747796711">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1609402118929" />
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1609747796711" />
     <state x="298" y="151" key="run.anything.popup" timestamp="1609306843258">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="298" y="151" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1609306843258" />
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1609746370237">
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1609756640174">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1609746370237" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1609756640174" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="java-method">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/hencesimplified/androidjetpackjava/view/DetailFragment.java</url>
-          <line>146</line>
+          <line>150</line>
           <properties class="com.hencesimplified.androidjetpackjava.view.DetailFragment" method="onOptionsItemSelected">
             <option name="EMULATED" value="true" />
           </properties>

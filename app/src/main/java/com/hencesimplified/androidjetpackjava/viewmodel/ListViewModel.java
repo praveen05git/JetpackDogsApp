@@ -79,7 +79,7 @@ public class ListViewModel extends AndroidViewModel {
     private void checkCacheDuration() {
         String cachePreference = preferencesHelper.getCacheDuration();
 
-        if (cachePreference.equals("")) {
+        if (!cachePreference.equals("")) {
             try {
                 int cachePreferenceInt = Integer.parseInt(cachePreference);
                 refreshTime = cachePreferenceInt * 1000 * 1000 * 1000L;

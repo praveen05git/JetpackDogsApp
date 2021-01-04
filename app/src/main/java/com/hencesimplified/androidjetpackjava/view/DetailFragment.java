@@ -1,5 +1,6 @@
 package com.hencesimplified.androidjetpackjava.view;
 
+import android.app.AlertDialog;
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -25,8 +26,10 @@ import com.bumptech.glide.request.target.CustomTarget;
 import com.bumptech.glide.request.transition.Transition;
 import com.hencesimplified.androidjetpackjava.R;
 import com.hencesimplified.androidjetpackjava.databinding.FragmentDetailBinding;
+import com.hencesimplified.androidjetpackjava.databinding.SendSmsDialogBinding;
 import com.hencesimplified.androidjetpackjava.model.DogBreed;
 import com.hencesimplified.androidjetpackjava.model.DogPalette;
+import com.hencesimplified.androidjetpackjava.model.SmsInfo;
 import com.hencesimplified.androidjetpackjava.util.Util;
 import com.hencesimplified.androidjetpackjava.viewmodel.DetailViewModel;
 
@@ -37,6 +40,7 @@ public class DetailFragment extends Fragment {
 
     private int dogUuid;
     private DetailViewModel viewModel;
+    private DogBreed currentDog;
     private FragmentDetailBinding binding;
     private Boolean sendSmsStarted = false;
 
@@ -106,7 +110,7 @@ public class DetailFragment extends Fragment {
                     Util.loadImage(dogImage, dogBreed.imageUrl, new CircularProgressDrawable(getContext()));
                 }
                  */
-
+                currentDog = dogBreed;
                 binding.setDog(dogBreed);
                 if (dogBreed.imageUrl != null) {
                     setupBackgroundColor(dogBreed.imageUrl);
@@ -160,6 +164,33 @@ public class DetailFragment extends Fragment {
     }
 
     public void onPermissionResult(Boolean permissionGranted) {
+        if(isAdded() && sendSmsStarted && permissionGranted) {
+            SmsInfo smsInfo = new SmsInfo("",currentDog.dogBreed+"bred_for"+currentDog.bredFor,currentDog.imageUrl);
+
+            SendSmsDialogBinding dialogBinding = DataBindingUtil.inflate(
+                    LayoutInflater.from(getContext()),
+                    R.layout.send_sms_dialog,
+                    null,
+                    false
+            );
+
+            new AlertDialog.Builder(getContext())
+                    .setView(dialogBinding.getRoot())
+                    .setPositiveButton("Send SMS", ((dialog,which)->{
+                        if(!dialogBinding.smsDestination.getText().toString().isEmpty()) {
+                            smsInfo.to = dialogBinding.smsDestination.getText().toString();
+                            sendSms(smsInfo);
+                        }
+                    }))
+                    .setNegativeButton("Cancel", (((dialog, which) -> {})))
+                    .show();
+            sendSmsStarted = false;
+
+            dialogBinding.setSmsInfo(smsInfo);
+        }
+    }
+
+    private void sendSms(SmsInfo smsInfo) {
 
     }
 }
