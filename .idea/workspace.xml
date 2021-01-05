@@ -25,18 +25,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="70006971-6728-473b-b438-ece04f1d873a" name="Default Changelist" comment="Working on Share and SMS feature">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/hencesimplified/androidjetpackjava/model/SmsInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/send_sms_dialog.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/hencesimplified/androidjetpackjava/view/DetailFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/hencesimplified/androidjetpackjava/view/DetailFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/hencesimplified/androidjetpackjava/viewmodel/ListViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/hencesimplified/androidjetpackjava/viewmodel/ListViewModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/hencesimplified/androidjetpackjava/view/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/hencesimplified/androidjetpackjava/view/MainActivity.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[Pixel_3a_API_30_x86]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -206,7 +204,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609747791815</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Working on Share and SMS feature">
+      <created>1609759873458</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1609759873458</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -257,10 +262,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1609747270833" />
-    <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1609747796711">
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1609759878054">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1609747796711" />
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1609759878054" />
     <state x="298" y="151" key="run.anything.popup" timestamp="1609306843258">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -275,7 +280,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="java-method">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/hencesimplified/androidjetpackjava/view/DetailFragment.java</url>
-          <line>150</line>
+          <line>153</line>
           <properties class="com.hencesimplified.androidjetpackjava.view.DetailFragment" method="onOptionsItemSelected">
             <option name="EMULATED" value="true" />
           </properties>

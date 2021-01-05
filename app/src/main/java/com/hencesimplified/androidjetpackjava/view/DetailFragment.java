@@ -1,9 +1,12 @@
 package com.hencesimplified.androidjetpackjava.view;
 
 import android.app.AlertDialog;
+import android.app.PendingIntent;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.telephony.SmsManager;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -164,8 +167,8 @@ public class DetailFragment extends Fragment {
     }
 
     public void onPermissionResult(Boolean permissionGranted) {
-        if(isAdded() && sendSmsStarted && permissionGranted) {
-            SmsInfo smsInfo = new SmsInfo("",currentDog.dogBreed+"bred_for"+currentDog.bredFor,currentDog.imageUrl);
+        if (isAdded() && sendSmsStarted && permissionGranted) {
+            SmsInfo smsInfo = new SmsInfo("", currentDog.dogBreed + "bred_for" + currentDog.bredFor, currentDog.imageUrl);
 
             SendSmsDialogBinding dialogBinding = DataBindingUtil.inflate(
                     LayoutInflater.from(getContext()),
@@ -176,13 +179,14 @@ public class DetailFragment extends Fragment {
 
             new AlertDialog.Builder(getContext())
                     .setView(dialogBinding.getRoot())
-                    .setPositiveButton("Send SMS", ((dialog,which)->{
-                        if(!dialogBinding.smsDestination.getText().toString().isEmpty()) {
+                    .setPositiveButton("Send SMS", ((dialog, which) -> {
+                        if (!dialogBinding.smsDestination.getText().toString().isEmpty()) {
                             smsInfo.to = dialogBinding.smsDestination.getText().toString();
                             sendSms(smsInfo);
                         }
                     }))
-                    .setNegativeButton("Cancel", (((dialog, which) -> {})))
+                    .setNegativeButton("Cancel", (((dialog, which) -> {
+                    })))
                     .show();
             sendSmsStarted = false;
 
@@ -191,6 +195,9 @@ public class DetailFragment extends Fragment {
     }
 
     private void sendSms(SmsInfo smsInfo) {
-
+        Intent intent = new Intent(getContext(), MainActivity.class);
+        PendingIntent pi = PendingIntent.getActivity(getContext(), 0, intent, 0);
+        SmsManager smsManager = SmsManager.getDefault();
+        smsManager.sendTextMessage(smsInfo.to, null, smsInfo.text, pi, null);
     }
 }
