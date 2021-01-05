@@ -24,10 +24,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="70006971-6728-473b-b438-ece04f1d873a" name="Default Changelist" comment="Working on Share and SMS feature">
+    <list default="true" id="70006971-6728-473b-b438-ece04f1d873a" name="Default Changelist" comment="Implemented Send SMS feature">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/hencesimplified/androidjetpackjava/view/DetailFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/hencesimplified/androidjetpackjava/view/DetailFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/hencesimplified/androidjetpackjava/view/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/hencesimplified/androidjetpackjava/view/MainActivity.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -211,7 +210,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609759873458</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Implemented Send SMS feature">
+      <created>1609824838887</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1609824838887</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -235,7 +241,8 @@
     <MESSAGE value="Implemented Notification" />
     <MESSAGE value="Working on Settings" />
     <MESSAGE value="Working on Share and SMS feature" />
-    <option name="LAST_COMMIT_MESSAGE" value="Working on Share and SMS feature" />
+    <MESSAGE value="Implemented Send SMS feature" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented Send SMS feature" />
   </component>
   <component name="WindowStateProjectService">
     <state x="158" y="86" key="#PSD" timestamp="1609135056097">
@@ -262,18 +269,18 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1609747270833" />
-    <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1609759878054">
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1609824843256">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1609759878054" />
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1609824843256" />
     <state x="298" y="151" key="run.anything.popup" timestamp="1609306843258">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="298" y="151" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1609306843258" />
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1609756640174">
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1609824618007">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1609756640174" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1609824618007" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

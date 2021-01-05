@@ -160,6 +160,12 @@ public class DetailFragment extends Fragment {
                 }
                 break;
             case R.id.action_share:
+                Intent shareIntent = new Intent(Intent.ACTION_SEND);
+                shareIntent.setType("text/plain");
+                shareIntent.putExtra(Intent.EXTRA_SUBJECT, "Check out this Dog!");
+                shareIntent.putExtra(Intent.EXTRA_TEXT, currentDog.dogBreed+" bred For: "+currentDog.bredFor);
+                shareIntent.putExtra(Intent.EXTRA_STREAM, currentDog.imageUrl);
+                startActivity(Intent.createChooser(shareIntent, "Share with: "));
                 break;
         }
 
@@ -195,8 +201,8 @@ public class DetailFragment extends Fragment {
     }
 
     private void sendSms(SmsInfo smsInfo) {
-        Intent intent = new Intent(getContext(), MainActivity.class);
-        PendingIntent pi = PendingIntent.getActivity(getContext(), 0, intent, 0);
+        Intent smsIntent = new Intent(getContext(), MainActivity.class);
+        PendingIntent pi = PendingIntent.getActivity(getContext(), 0, smsIntent, 0);
         SmsManager smsManager = SmsManager.getDefault();
         smsManager.sendTextMessage(smsInfo.to, null, smsInfo.text, pi, null);
     }
