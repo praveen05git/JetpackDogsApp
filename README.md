@@ -16,10 +16,10 @@
 - Caches the data in Local Database
 - Notify when retrieved from API
 - Color Palettes matching Dog photos
+- Settings to adjust Cache duration
 
 <p align="center">
-  <img src="/previews/AnimalsAppGif1.gif" width="21%"/>
-  <img src="/previews/AnimalsAppGif2.gif" width="21%"/>
+  <img src="/previews/DogsAppCacheGif.gif" width="21%"/>
 </p>
 
 ## Tech stack & Open-source libraries
@@ -33,3 +33,4 @@
 - Implemented DataBinding
 - Glide and Palette Library for loading images and colors
 - Notifies the user when retrieved from Endpoint
+- Used Settings Fragment to update the Cache Duration
