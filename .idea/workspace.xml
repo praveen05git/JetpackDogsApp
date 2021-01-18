@@ -24,18 +24,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="70006971-6728-473b-b438-ece04f1d873a" name="Default Changelist" comment="Implemented Share feature">
-      <change afterPath="$PROJECT_DIR$/previews/DogsAppGif1.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/previews/DogsAppNotificationGif.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-    </list>
+    <list default="true" id="70006971-6728-473b-b438-ece04f1d873a" name="Default Changelist" comment="Added Previews and updated Readme" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[Pixel_3a_API_30_x86]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -226,7 +221,21 @@
       <option name="project" value="LOCAL" />
       <updated>1609825474020</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Added Previews and updated Readme">
+      <created>1610940080116</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1610940080116</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Added Previews and updated Readme">
+      <created>1610940302014</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1610940302014</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -252,7 +261,8 @@
     <MESSAGE value="Working on Share and SMS feature" />
     <MESSAGE value="Implemented Send SMS feature" />
     <MESSAGE value="Implemented Share feature" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented Share feature" />
+    <MESSAGE value="Added Previews and updated Readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Previews and updated Readme" />
   </component>
   <component name="WindowStateProjectService">
     <state x="158" y="86" key="#PSD" timestamp="1609135056097">
@@ -263,10 +273,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="446" y="47" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1609756970546" />
-    <state x="93" y="93" width="1095" height="495" key="AVDManager" timestamp="1610939717528">
+    <state x="93" y="93" width="1095" height="495" key="AVDManager" timestamp="1610940432659">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="93" y="93" width="1095" height="495" key="AVDManager/0.0.1280.680@0.0.1280.680" timestamp="1610939717528" />
+    <state x="93" y="93" width="1095" height="495" key="AVDManager/0.0.1280.680@0.0.1280.680" timestamp="1610940432659" />
     <state x="221" y="95" key="AndroidCreateResourceFileDialog" timestamp="1609756739009">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -275,14 +285,14 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1609825809239" />
-    <state x="142" y="0" key="SettingsEditor" timestamp="1609747270833">
+    <state x="142" y="0" key="SettingsEditor" timestamp="1610940323131">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1609747270833" />
-    <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1609825481405">
+    <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1610940323131" />
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1610940307509">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1609825481405" />
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1610940307509" />
     <state x="450" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1610938855283">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
