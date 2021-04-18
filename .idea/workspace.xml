@@ -24,13 +24,16 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="70006971-6728-473b-b438-ece04f1d873a" name="Default Changelist" comment="Added Previews and updated Readme" />
+    <list default="true" id="70006971-6728-473b-b438-ece04f1d873a" name="Default Changelist" comment="Added Previews and updated Readme">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_settings.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[Pixel_3a_API_30_x86]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -46,6 +49,11 @@
       </list>
     </option>
   </component>
+  <component name="GenerateSignedApkSettings">
+    <option name="KEY_STORE_PATH" value="D:\App Sign\Appsign.jks" />
+    <option name="KEY_ALIAS" value="Praveen" />
+    <option name="BUILD_TARGET_KEY" value="apk" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -59,9 +67,16 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ApkExportedModule" value="AndroidJetpackJava.app" />
+    <property name="ExportApk.ApkPath" value="D:\AndroidStudioProjects\Java\AndroidJetpackJava\app" />
+    <property name="ExportApk.BuildVariants" value="release" />
+    <property name="ExportApk.SignV1" value="true" />
+    <property name="ExportApk.SignV2" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="android-custom-viewD:/Android/Sdk/sources/android-30/android/view/View.java_SELECTED" value="View" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="multi-representation-previewD:/Android/Sdk/sources/android-30/android/view/View.java_selected" value="Custom views" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -235,7 +250,21 @@
       <option name="project" value="LOCAL" />
       <updated>1610940302014</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Added Previews and updated Readme">
+      <created>1610940509659</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1610940509659</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Added Previews and updated Readme">
+      <created>1610940642368</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1610940642368</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -265,46 +294,34 @@
     <option name="LAST_COMMIT_MESSAGE" value="Added Previews and updated Readme" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="158" y="86" key="#PSD" timestamp="1609135056097">
+    <state x="93" y="93" width="1095" height="495" key="AVDManager" timestamp="1615087964946">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="158" y="86" key="#PSD/0.0.1280.680@0.0.1280.680" timestamp="1609135056097" />
-    <state x="446" y="47" key="#com.intellij.ide.util.MemberChooser" timestamp="1609756970546">
+    <state x="93" y="93" width="1095" height="495" key="AVDManager/0.0.1280.680@0.0.1280.680" timestamp="1615087964946" />
+    <state x="421" y="95" key="FileChooserDialogImpl" timestamp="1615093435149">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="446" y="47" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1609756970546" />
-    <state x="93" y="93" width="1095" height="495" key="AVDManager" timestamp="1610940432659">
+    <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1615093435149" />
+    <state x="142" y="0" key="SettingsEditor" timestamp="1615087949941">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="93" y="93" width="1095" height="495" key="AVDManager/0.0.1280.680@0.0.1280.680" timestamp="1610940432659" />
-    <state x="221" y="95" key="AndroidCreateResourceFileDialog" timestamp="1609756739009">
+    <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1615087949941" />
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1618744969579">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="221" y="95" key="AndroidCreateResourceFileDialog/0.0.1280.680@0.0.1280.680" timestamp="1609756739009" />
-    <state x="421" y="95" key="FileChooserDialogImpl" timestamp="1609825809239">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1609825809239" />
-    <state x="142" y="0" key="SettingsEditor" timestamp="1610940323131">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1610940323131" />
-    <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1610940307509">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1610940307509" />
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1618744969579" />
     <state x="450" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1610938855283">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="450" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1610938855283" />
-    <state x="298" y="151" key="run.anything.popup" timestamp="1609306843258">
+    <state x="403" y="242" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1618744988508">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="298" y="151" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1609306843258" />
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1609824618007">
+    <state x="403" y="242" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1280.680@0.0.1280.680" timestamp="1618744988508" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1614145877813">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1609824618007" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1614145877813" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
