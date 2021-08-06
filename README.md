@@ -1,7 +1,7 @@
 <h1 align="center">Dogs App</h1>
 
 <p align="center">  
- App to demonstrate MVVM, Retrofit and RxJava</br>
+ Dog App using Java, Jetpack components, MVVM, Retrofit and RxJava</br>
 </p>
 </br>
 <p align="center">
